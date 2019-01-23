@@ -1,0 +1,6 @@
+module.exports = {
+    NODE_ENV: '"production"',
+    ENV_CONFIG: '"sit"',
+    BASE_API: '"http://127.0.0.1:8090/api"',
+    FILE_API: '"http://127.0.0.1:8091"'
+}
