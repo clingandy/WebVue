@@ -2,7 +2,7 @@
   "name": "vue-element-admin",
   "version": "3.6.6",
   "description": "A magical vue admin. Typical templates for enterprise applications. Newest development stack of vue. Lots of awesome features",
-  "author": "Pan <panfree23@gmail.com>",
+  "author": "Ling",
   "license": "MIT",
   "scripts": {
     "dev": "webpack-dev-server --inline --progress --config build/webpack.dev.conf.js",
@@ -48,6 +48,7 @@
     "vue-splitpane": "1.0.2",
     "vuedraggable": "^2.16.0",
     "vuex": "3.0.1",
+    "webpack-cli": "^3.2.1",
     "xlsx": "^0.11.16"
   },
   "devDependencies": {
@@ -95,7 +96,7 @@
     "vue-template-compiler": "2.5.10",
     "webpack": "3.10.0",
     "webpack-bundle-analyzer": "2.9.1",
-    "webpack-dev-server": ">= 3.1.11",
+    "webpack-dev-server": "^2.9.4",
     "webpack-merge": "4.1.1"
   },
   "engines": {
