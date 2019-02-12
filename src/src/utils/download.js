@@ -27,7 +27,7 @@ service.interceptors.request.use(config => {
 service.interceptors.response.use(
     response => {
         var fileDownload = require('js-file-download'); // 使用js-file-download插件
-        const disposition = response.headers['content-disposition'];
+        const disposition = response.headers['content-disposition']; // 后端需要加 Headers["Access-Control-Expose-Headers"] = "Content-Disposition";
         const fileName = decodeURI(disposition.substring(disposition.indexOf("''") + 2)); // 处理格式
         fileDownload(response.data, fileName);
     },

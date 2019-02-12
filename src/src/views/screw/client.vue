@@ -23,6 +23,12 @@
         </template>
       </el-table-column>
 
+      <el-table-column align="center" label="真实姓名">
+        <template slot-scope="scope">
+          <span>{{scope.row.realName}}</span>
+        </template>
+      </el-table-column>
+
       <el-table-column align="center" label="微信">
         <template slot-scope="scope">
           <span>{{scope.row.weChat}}</span>
@@ -59,7 +65,7 @@
         </template>
       </el-table-column>
 
-      <el-table-column align="center" :label="$t('table.actions')" class-name="small-padding fixed-width">
+      <el-table-column align="center" :label="$t('table.actions')" width="150px" class-name="small-padding fixed-width">
         <template slot-scope="scope">
           <el-button type="primary" v-if="editClient" size="mini" @click="handleUpdate(scope.row)">{{$t('table.edit')}}</el-button>
           <el-button type="primary" size="mini" @click="navigateTo(scope.row)">收货地址</el-button>
@@ -78,7 +84,11 @@
         
         <el-form-item label='旺旺名称' prop="clientName">
           <el-input autosize v-model="creatClient.clientName" placeholder="Please input"></el-input>
-        </el-form-item>     
+        </el-form-item>
+
+        <el-form-item label='真实姓名' prop="realName">
+          <el-input autosize v-model="creatClient.realName" placeholder="Please input"></el-input>
+        </el-form-item>  
 
         <el-form-item label='微信' prop="weChat">
           <el-input autosize v-model="creatClient.weChat" placeholder="Please input"></el-input>

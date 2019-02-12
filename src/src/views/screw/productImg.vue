@@ -46,7 +46,7 @@
           <el-input autosize v-model="createProductImg.imgUrl" placeholder="Please input" style="display:none;"></el-input>
         </el-form-item>
 
-        <el-upload drag :action="uploadUrl()" :on-success="uploadSuccess" :before-upload="beforeAvatarUpload" :show-file-list="false" :headers="uploadHeaders">
+        <el-upload drag accept=".jpg,.png" :action="uploadUrl()" :on-success="uploadSuccess" :before-upload="beforeAvatarUpload" :show-file-list="false" :headers="uploadHeaders">
           <i class="el-icon-upload"></i>
           <div class="el-upload__text">将文件拖到此处，或<em>点击上传</em></div>
           <div slot="tip" style="color:red" class="el-upload__tip"> *请上传200K内图片，上传文件格式只能是png|jpg</div>

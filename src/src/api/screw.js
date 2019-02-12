@@ -177,6 +177,17 @@ export function getOrderPageList(params) {
     })
 }
 
+// 打印订单
+export function printOrder(orderId) {
+    return download({
+        url: '/order/PrintOrder',
+        method: 'get',
+        params:{
+            orderId
+        }
+    })
+}
+
 // 获取订单状态
 export function getOrderStatus() {
     return request({

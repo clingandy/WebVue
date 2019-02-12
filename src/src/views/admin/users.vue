@@ -70,7 +70,7 @@
         </template>
       </el-table-column>
 
-      <el-table-column align="center" :label="$t('table.actions')"  style="width: 100%" class-name="small-padding fixed-width">
+      <el-table-column align="center" :label="$t('table.actions')"  width="150px" class-name="small-padding fixed-width">
         <template slot-scope="scope">
           <el-button type="primary" v-if="EditUser" size="mini" @click="handleUpdate(scope.row)">{{$t('table.edit')}}</el-button>
           <el-button type="primary" v-if="EditUser" size="mini" @click="handleResetPwd(scope.row)">重置</el-button> 

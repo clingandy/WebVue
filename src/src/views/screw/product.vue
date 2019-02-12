@@ -38,30 +38,6 @@
         </template>
       </el-table-column>
 
-      <!-- <el-table-column align="center" label="产品名称">
-        <template slot-scope="scope">
-          <span>{{typeConvert(scope.row.productNameType, productNameTypeOptions)}}</span>
-        </template>
-      </el-table-column>
-
-      <el-table-column align="center" label="规格">
-        <template slot-scope="scope">
-          <span>{{scope.row.specification}}</span>
-        </template>
-      </el-table-column>
-
-      <el-table-column align="center" label="材质">
-        <template slot-scope="scope">
-           <span>{{typeConvert(scope.row.material, materialOptions)}}</span>
-        </template>
-      </el-table-column>
-
-      <el-table-column align="center" label="外观">
-        <template slot-scope="scope">
-           <span>{{typeConvert(scope.row.exterior, exteriorOptions)}}</span>
-        </template>
-      </el-table-column> -->
-
       <el-table-column align="center" label="包重量（KG）">
         <template slot-scope="scope">
           <span>{{scope.row.packageWeight|toFixed(3)}}</span>
@@ -189,8 +165,8 @@
       </div>
     </el-dialog>
 
-    <el-dialog width="35%" title="批量导入" :visible.sync="dialogUploadVisible">
-      <el-upload drag :action="uploadUrl()" :on-success="uploadSuccess" :before-upload="beforeAvatarUpload" :show-file-list="false" :headers="uploadHeaders">
+    <el-dialog :fullscreen="this.isMobile" title="批量导入" :visible.sync="dialogUploadVisible">
+      <el-upload drag accept=".xlsx" :action="uploadUrl()" :on-success="uploadSuccess" :before-upload="beforeAvatarUpload" :show-file-list="false" :headers="uploadHeaders">
         <i class="el-icon-upload"></i>
         <div class="el-upload__text">将文件拖到此处，或<em>点击上传</em></div>
         <div slot="tip" style="color:red" class="el-upload__tip"> *请按照模板格式上传10M内文件，上传文件格式只能是office2007以上版本的xlsx</div>
